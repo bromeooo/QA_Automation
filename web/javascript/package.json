@@ -1,0 +1,16 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test-test": "cucumber-js -p default"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.3.1"
+  }
+}
