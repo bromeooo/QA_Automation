@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "cucumber-js -c test_cucumber/config/config.js"
+    "test": "cucumber-js --config test_cucumber/config/config.js -p default",
   },
   "keywords": [],
   "author": "",

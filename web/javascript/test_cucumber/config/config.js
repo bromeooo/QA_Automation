@@ -1,3 +1,6 @@
 module.exports = {
-  default: '--require ../feature_steps/*.js ../feature/*.feature',
+  default: {
+    require: ['./test_cucumber/feature_steps/*.js'],
+    paths: ['./test_cucumber/feature/*.feature']
+  }
 };
