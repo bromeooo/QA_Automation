@@ -1,4 +1,3 @@
 module.exports = {
-    default: '--require ../test_steps/**/*.js ../features/**/*.feature',
-  };
-  
+  default: '--require ../feature_steps/*.js ../feature/*.feature',
+};
