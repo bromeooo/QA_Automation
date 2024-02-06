@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @test",
-    "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright"
+    "selenium-test": "cucumber-js --config testCucumber/config/config.js -p default -t @selenium",
+    "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright",
+    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @test"
   },
   "keywords": [],
   "author": "",

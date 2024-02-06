@@ -6,7 +6,7 @@ Feature: Test herokuapp UI
     When the user clicks the success button and the first edit with playwright
     Then the user performed the actions correctly with playwright
 
-  @selenium @test
+  @selenium
   Scenario: Selenium UI Test
     Given the user goes to Challenging DOM with selenium
     When the user clicks the success button and the first edit with selenium
