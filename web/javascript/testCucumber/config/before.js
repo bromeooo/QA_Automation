@@ -1,5 +1,6 @@
 const { Before, setDefaultTimeout } = require('@cucumber/cucumber');
 const playwright = require('playwright');
+const selenium = require('selenium-webdriver');
 const fs = require('fs');
 const path = require('path');
 
@@ -26,4 +27,14 @@ Before({ tags: "@playwright" }, async function (scenario) {
   await this.context.tracing.start({ screenshots: true, snapshots: true });
 
   console.log('Launching Playwright Chromium Browser');
+});
+
+// Selenium hook
+Before({ tags: "@selenium" }, async function () {
+  // Define your Selenium WebDriver settings here
+  this.driver = new selenium.Builder()
+    .forBrowser('chrome') // or 'firefox', 'edge', etc.
+    .build();
+
+  console.log('Launching Selenium WebDriver');
 });

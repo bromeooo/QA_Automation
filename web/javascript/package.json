@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "cucumber-js --config testCucumber/config/config.js -p default"
+    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @test",
+    "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "chai": "^4.3.4",
     "cucumber-html-reporter": "^7.1.1",
     "ndjson": "^2.0.0",
-    "playwright": "^1.41.2"
+    "playwright": "^1.41.2",
+    "selenium-webdriver": "^4.17.0"
   }
 }

@@ -1,5 +1,5 @@
 // Import the BasePage class
-const BasePage = require('./BasePage');
+const BasePage = require('../driverPlaywright/basePage');
 const constants = require('../../../testData/constants.json');
 
 class Home extends BasePage {
