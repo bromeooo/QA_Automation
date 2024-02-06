@@ -17,7 +17,6 @@ When('the user clicks the success button and the first edit with selenium', asyn
   challengeTextInit = await domChallenge.getAnswerValue();
   await domChallenge.pressSuccessButton();
   finalUrl = await domChallenge.pressAndValidateFirstEdit();
-  assert.isTrue(false)
 });
 
 Then('the user performed the actions correctly with selenium', async function () {
