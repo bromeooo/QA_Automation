@@ -6,7 +6,6 @@ class Home extends BasePage {
 
     constructor(page) {
         super(page);
-        // Define selectors or elements specific to the Home page
         this.challengingDom = this.page.getByText('Challenging DOM');
     }
 
@@ -14,11 +13,8 @@ class Home extends BasePage {
         await this.navigate(constants.baseUrl)
     }
 
-
-    async performSomeUniqueAction() {
-        const element = await this.page.$(this.someUniqueElementSelector);
-        await this.doClick(element);
-        // Other actions can be added here
+    async goToDOMChallenge() {
+        await this.doClick(this.challengingDom);
     }
 
 }

@@ -17,6 +17,7 @@ class BasePage {
      */
     async doClick(element, timeout = this.defaultTimeout) {
         await element.waitFor({ state: "visible", timeout });
+        await element.hover()
         await element.click();
     }
 
