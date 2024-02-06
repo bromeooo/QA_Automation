@@ -13,8 +13,9 @@ class Home extends BasePage {
         await this.navigate(constants.baseUrl)
     }
 
-    async goToDOMChallenge() {
+    async goToDomChallenge() {
         await this.doClick(this.challengingDom);
+        await this.waitForUrlToContain('challenging_dom')
     }
 
 }

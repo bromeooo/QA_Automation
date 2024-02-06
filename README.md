@@ -36,21 +36,24 @@ QA_Automation
 └─ web
    ├─ javascript
    │  ├─ .nvmrc
+   │  ├─ README.md
    │  ├─ driverPlaywright
    │  │  ├─ basePage.js
+   │  │  ├─ domChallenge.js
    │  │  └─ home.js
    │  ├─ driverSelenium
    │  ├─ package-lock.json
    │  ├─ package.json
-   │  └─ test_cucumber
+   │  ├─ testArtifacts
+   │  └─ testCucumber
    │     ├─ config
    │     │  ├─ after.js
    │     │  ├─ before.js
    │     │  └─ config.js
    │     ├─ feature
    │     │  └─ test.feature
-   │     └─ feature_steps
-   │        └─ test_steps.js
+   │     └─ featureSteps
+   │        └─ testSteps.js
    └─ python
       ├─ Makefile
       ├─ README.md

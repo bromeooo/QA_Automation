@@ -40,7 +40,14 @@ class BasePage {
         await this.page.goto(url, { waitUntil: 'domcontentloaded' });
     }
 
-    // Add more methods as needed
+     /**
+     * Wait for URL to contain
+     * @param {string} text - The URL to contain this text.
+     */
+    async waitForUrlToContain(text) {
+        const regex = new RegExp(text);
+        await this.page.waitForURL(regex, { waitUntil: 'domcontentloaded' });
+    }    
 }
 
 module.exports = BasePage;
