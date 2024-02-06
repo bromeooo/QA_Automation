@@ -1,20 +1,10 @@
-// { before } = require('@cucumber/cucumber');
+const { Before } = require('@cucumber/cucumber');
+const playwright = require('playwright');
 
-// let browser;
-// let page;
+Before(async function () {
+  const browser = await playwright.chromium.launch({ headless: false });
+  const context = await browser.newContext();
+  this.page = await context.newPage();
+  console.log('Launching Chromium browser');
 
-// before(async () => {
-//   // Launch the browser
-//   browser = await playwright.chromium.launch({
-//     headless: false // set to true to run browser in headless mode
-//   });
 
-//   // Create a new browser context
-//   const context = await browser.newContext();
-
-//   // Create a new page in the browser context
-//   page = await context.newPage();
-// });
-
-// // Export the page object for use in step definitions
-// module.exports = { page };

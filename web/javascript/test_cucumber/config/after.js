@@ -1,9 +1,7 @@
-// { after } = require('@cucumber/cucumber');
+const { After } = require('@cucumber/cucumber');
 
-// const { after } = require('@cucumber/cucumber');
-
-// after(async () => {
-//   if (browser) {
-//     await browser.close();
-//   }
-// });
+After(async function() {
+  if (this.browser) {
+    await this.browser.close();
+  }
+});

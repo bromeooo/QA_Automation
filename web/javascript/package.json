@@ -5,12 +5,14 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "cucumber-js --config test_cucumber/config/config.js -p default",
+    "test": "cucumber-js --config test_cucumber/config/config.js -p default"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@cucumber/cucumber": "^10.3.1"
+    "@cucumber/cucumber": "^10.3.1",
+    "chai": "^4.3.4",
+    "playwright": "^1.41.2"
   }
 }

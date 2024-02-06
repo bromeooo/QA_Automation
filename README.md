@@ -22,16 +22,24 @@
 - if python create a venv
 - ``` make setup ```
 - view readme in directory on how to lauch a test for the specific technology stack
+
 ```
 QA_Automation
 ├─ README.md
 ├─ api
+├─ helpers
+│  ├─ javascript
+│  └─ python
 ├─ mobile
+├─ testData
+│  └─ constants.json
 └─ web
    ├─ javascript
    │  ├─ .nvmrc
-   │  ├─ driver_playwright
-   │  ├─ driver_selenium
+   │  ├─ driverPlaywright
+   │  │  ├─ basePage.js
+   │  │  └─ home.js
+   │  ├─ driverSelenium
    │  ├─ package-lock.json
    │  ├─ package.json
    │  └─ test_cucumber
@@ -43,16 +51,15 @@ QA_Automation
    │     │  └─ test.feature
    │     └─ feature_steps
    │        └─ test_steps.js
-   ├─ python
-   │  ├─ Makefile
-   │  ├─ README.md
-   │  ├─ driver_playwright
-   │  ├─ driver_selenium
-   │  ├─ test_cucumber
-   │  │  ├─ config
-   │  │  ├─ feature
-   │  │  └─ feature_steps
-   │  └─ test_pytest
-   └─ test_data
+   └─ python
+      ├─ Makefile
+      ├─ README.md
+      ├─ driver_playwright
+      ├─ driver_selenium
+      ├─ test_cucumber
+      │  ├─ config
+      │  ├─ feature
+      │  └─ feature_steps
+      └─ test_pytest
 
 ```
