@@ -5,6 +5,6 @@ module.exports = {
       "./testCucumber/config/*.js", // get all hooks
     ],
     paths: ["./testCucumber/feature/*.feature"],
-    format: ['json:./testArtifacts/cucumber_report.json'], // Generate JSON report
+    format: ['html:./testArtifacts/cucumber_report.html'], // Generate JSON report
   },
 };
