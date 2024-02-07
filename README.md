@@ -25,6 +25,8 @@
 
 ```
 QA_Automation
+├─ .vscode
+│  └─ launch.json
 ├─ README.md
 ├─ api
 ├─ helpers
@@ -42,9 +44,16 @@ QA_Automation
    │  │  ├─ domChallenge.js
    │  │  └─ home.js
    │  ├─ driverSelenium
+   │  │  ├─ basePage.js
+   │  │  ├─ domChallenge.js
+   │  │  └─ home.js
    │  ├─ package-lock.json
    │  ├─ package.json
    │  ├─ testArtifacts
+   │  │  ├─ .DS_Store
+   │  │  ├─ cucumber_report.html
+   │  │  └─ trace
+   │  │     └─ Playwright_UI_Test
    │  └─ testCucumber
    │     ├─ config
    │     │  ├─ after.js
@@ -53,16 +62,32 @@ QA_Automation
    │     ├─ feature
    │     │  └─ test.feature
    │     └─ featureSteps
-   │        └─ testSteps.js
+   │        ├─ testSteps_playwright.js
+   │        └─ testSteps_selenium.js
    └─ python
       ├─ Makefile
       ├─ README.md
-      ├─ driver_playwright
-      ├─ driver_selenium
-      ├─ test_cucumber
-      │  ├─ config
-      │  ├─ feature
-      │  └─ feature_steps
-      └─ test_pytest
+      ├─ cucumber
+      │  ├─ Makefile
+      │  ├─ driver_playwright
+      │  │  ├─ __init__.py
+      │  │  ├─ __pycache__
+      │  │  │  ├─ __init__.cpython-39.pyc
+      │  │  │  ├─ basePage.cpython-39.pyc
+      │  │  │  └─ home.cpython-39.pyc
+      │  │  ├─ base_page.py
+      │  │  ├─ dom_challenge.py
+      │  │  └─ home.py
+      │  ├─ environment.py
+      │  ├─ steps
+      │  │  ├─ __init__.py
+      │  │  ├─ playwright_steps.py
+      │  │  └─ test_steps_selenium.py
+      │  ├─ test.feature
+      │  └─ test_artifacts
+      │     └─ trace
+      ├─ driverSelenium
+      ├─ requirements.txt
+      └─ testPytest
 
 ```

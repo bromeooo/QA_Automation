@@ -1,9 +1,6 @@
-
-# Command to run Playwright tests
 playwright_test:
-	behave --tags=@playwright --format html --out test_artifacts
+	behave --tags=@playwright --format html --out test_artifacts/report/report.html
 
 # Command to run Selenium tests
 selenium_test:
-	behave --tags=@selenium
-
+	behave --tags=@selenium --format html --out test_artifacts/report/report.html

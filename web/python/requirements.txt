@@ -1,6 +1,6 @@
-
 assertpy==1.1
 behave==1.2.6
+behave-html-formatter==0.9.10
 build==1.0.3
 CacheControl==0.13.1
 certifi==2024.2.2
@@ -12,14 +12,12 @@ distlib==0.3.8
 dulwich==0.21.7
 fastjsonschema==2.19.1
 filelock==3.13.1
-future>=0
 greenlet==3.0.3
 idna==3.6
 importlib-metadata==7.0.1
 installer==0.7.0
 jaraco.classes==3.3.0
 keyring==24.3.0
-macholib>=1
 more-itertools==10.2.0
 msgpack==1.0.7
 packaging==23.2
@@ -40,7 +38,6 @@ rapidfuzz==3.6.1
 requests==2.31.0
 requests-toolbelt==1.0.0
 shellingham==1.5.4
-six>=1
 tomli==2.0.1
 tomlkit==0.12.3
 trove-classifiers==2024.1.31
