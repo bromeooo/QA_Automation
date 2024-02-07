@@ -5,7 +5,12 @@
 - Page Object Model is used for each sub repo
 - To use for your own project, copy the test runner folder and the driver folder for the tech stack of your choice. 
 
-## Technology used
+## Languages
+- Python
+- JavaScript
+- Java
+
+## Technology
  - Cucumber
  - Pytest
  - Mocha
