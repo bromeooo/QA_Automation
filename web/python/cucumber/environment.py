@@ -11,7 +11,6 @@ use_step_matcher("re")
 def before_all(context):
     context.default_timeout = DEFAULT_TIMEOUT
 
-
 # create playwright chromium fixture
 @fixture
 async def playwright_browser_chrome(context):
@@ -21,7 +20,9 @@ async def playwright_browser_chrome(context):
         slow_mo=1000,
         channel="chrome",
     )
-    context.page = await browser.new_page()
+    context.browser_context = await browser.new_context()  # Create a new browser context
+    await context.browser_context.tracing.start(screenshots=True, snapshots=True)  # Start tracing in the new context
+    context.page = await context.browser_context.new_page()  # Create a new page in the context
     context.page.set_default_timeout(30000)
     return context.page
 
@@ -46,11 +47,10 @@ async def after_scenario(context, scenario):
     if "playwright" in scenario.tags:
         if hasattr(context, "page"):
             await context.page.close()
-        if hasattr(context, "browser"):
-            await context.browser.close()
-
+        if hasattr(context, "browser_context"):
+            await context.browser_context.tracing.stop(path=str(Path("./test_artifacts/trace") / f"{scenario.name}.trace"))  # Save the trace as a .trace file
+            await context.browser_context.close()  # Close the browser context
 
 # After all scenarios
 def after_all(context):
     print("Executing after all scenarios")
-
