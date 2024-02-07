@@ -4,3 +4,4 @@
 2. ``` .\venv\Scripts\active ``` if windows
     ``` source venv/bin/activate ``` if mac
 3. ``` make setup ```
+    - poetry is used to manage dependencies

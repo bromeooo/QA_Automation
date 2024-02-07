@@ -7,6 +7,7 @@
   "scripts": {
     "selenium-test": "cucumber-js --config testCucumber/config/config.js -p default -t @selenium",
     "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright",
+    "paralell-test": "cucumber-js --config testCucumber/config/config.js -p default --parallel 2",
     "test": "cucumber-js --config testCucumber/config/config.js -p default -t @test"
   },
   "keywords": [],

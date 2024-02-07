@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Python: Attach",
+        "type": "debugpy",
+        "request": "attach",
+        "connect": {
+          "host": "localhost",
+          "port": 5678
+        }
+      }
+    ,
+        {
+        "name": "Python: Behave",
+        "type": "python",
+        "request": "launch",
+        "cwd": "${workspaceFolder}",
+        "program": "${workspaceFolder}/web/python/venv/bin/behave", // Adjust the path to your Behave executable
+        "args": ["--tags=@playwright", "-i", "testCucumber/feature"], // Adjust your behave arguments and feature path
+        "console": "integratedTerminal"
+    }
+]
+  }
+  
