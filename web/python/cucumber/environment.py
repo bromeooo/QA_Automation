@@ -20,9 +20,9 @@ async def playwright_browser_chrome(context):
         slow_mo=1000,
         channel="chrome",
     )
-    context.browser_context = await browser.new_context()  # Create a new browser context
-    await context.browser_context.tracing.start(screenshots=True, snapshots=True)  # Start tracing in the new context
-    context.page = await context.browser_context.new_page()  # Create a new page in the context
+    context.browser_context = await browser.new_context()
+    await context.browser_context.tracing.start(screenshots=True, snapshots=True)
+    context.page = await context.browser_context.new_page() 
     context.page.set_default_timeout(30000)
     return context.page
 
