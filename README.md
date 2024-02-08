@@ -19,14 +19,13 @@
  - Cypress
  - Appium
  - WebdriverIO
+ - Github Actions
  - Page Object Model
 
 ### To perform demo tests
 - cd into api, web or mobile testing repo
 - cd into language of choice
-- if python create a venv
-- ``` make setup ```
-- view readme in directory on how to lauch a test for the specific technology stack
+- view readme in the directory on how to lauch a test for the specific technology stack
 
 ```
 QA_Automation
