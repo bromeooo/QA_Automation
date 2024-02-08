@@ -1,17 +1,18 @@
-@posts
-Feature: Post Item Management
+#language:en 
 
-  Scenario: Listing all Post Items
-    Given the posts endpoint is available
-    When I request all Post items
-    Then all Post items should be displayed
+Feature: Post item
 
-  Scenario: Adding a New Post Item
-    Given the posts endpoint is available
-    When I add a new Post item with title "Testing" and body "Testing API example"
-    Then the new Post item should be added successfully
+    Background: Use endpoint posts
+        Given use endpoint posts
 
-  Scenario: Deleting a Post Item
-    Given the posts endpoint is available
-    When I delete the Post item with id 1
-    Then the Post item should be deleted successfully
+    Scenario: List all Post itens
+        When ready all Post item
+        Then I view all Post items
+
+    Scenario: Add new Post item
+        When add new Post item
+        Then I view the new Item
+
+    Scenario: Delete Post item
+        When delete new Post item
+        Then Item was deleted
