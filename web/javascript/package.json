@@ -8,7 +8,9 @@
     "selenium-test": "cucumber-js --config testCucumber/config/config.js -p default -t @selenium",
     "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright",
     "parallel-test": "cucumber-js --config testCucumber/config/config.js -p default --parallel 2",
-    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @test"
+    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun",
+    "sunrun": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun"
+
   },
   "keywords": [],
   "author": "",

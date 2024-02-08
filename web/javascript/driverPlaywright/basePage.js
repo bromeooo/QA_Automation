@@ -21,6 +21,17 @@ class BasePage {
         await element.click();
     }
 
+        /**
+     * Clicks on an element.
+     * @param {ElementHandle} element - The element to click.
+     * @param {number} [timeout=this.defaultTimeout] - Optional timeout for waiting.
+     */
+        async dblClick(element, timeout = this.defaultTimeout) {
+            await element.waitFor({ state: "visible", timeout });
+            await element.hover()
+            await element.dblclick();
+        }    
+
     /**
      * Sends keystrokes to an element.
      * @param {ElementHandle} element - The element.
