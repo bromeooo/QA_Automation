@@ -21,14 +21,13 @@ jobs:
         cache: 'npm'
         cache-dependency-path: web/javascript/package-lock.json
     
-    - name: Change Directory to web/javascript
-      run: cd web/javascript
-
     - name: Install Dependencies
       run: npm install
+      working-directory: web/javascript
 
     - name: Run Parallel Tests
       run: npm run parallel-test
+      working-directory: web/javascript
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
