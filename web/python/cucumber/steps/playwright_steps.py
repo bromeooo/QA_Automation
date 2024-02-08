@@ -3,6 +3,7 @@ from behave.api.async_step import async_run_until_complete
 from driver_playwright.home import Home 
 from driver_playwright.dom_challenge import DomChallenge
 import assertpy
+import pdb
 
 use_step_matcher("re")
 challenge_text_init = None
@@ -20,6 +21,7 @@ async def step_impl(context):
 @async_run_until_complete
 async def step_impl(context):
     global challenge_text_init, final_url
+    # pdb.set_trace() ## future breakpoint
     dom_challenge = DomChallenge(context.page)
     challenge_text_init = await dom_challenge.get_answer_value()
     await dom_challenge.press_success_button()
