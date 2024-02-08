@@ -1,4 +1,2 @@
-node_modules
-testArtifacts
-testArtifacts/trace
+cucumber/test_artifacts
 venv
