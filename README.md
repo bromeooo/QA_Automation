@@ -34,4 +34,4 @@
 
 ## Github Actions
 - To see a sample of how to call a parallel test using both playwright and selenium, see the actons tab run. Trace files are generated for Playwright tests as artifacts and cucumber reports for both drivers
-- If you would like to test actions, please branch off of the demo yml and follow this guide for [self hosted runners](https://github.com/bromeooo/QA_Automation/settings/actions/runners/new?arch=x64&os=osx) 
+- Please message me if you would like to test on a [self hosted runner](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners) 
