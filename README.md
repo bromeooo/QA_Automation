@@ -27,7 +27,10 @@
  - Github Actions
  - Page Object Model
 
-### To perform demo tests
+## To perform demo tests
 - cd into api, web or mobile testing repo
 - cd into language of choice
 - view readme in the directory on how to lauch a test for the specific technology stack
+
+## Actions
+- To see a sample of how to call a parallel test using both playwright and selenium, see the actons tab run. Trace files are generated for Playwright tests as artifacts and cucumber reports for both drivers
