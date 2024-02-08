@@ -5,7 +5,8 @@ on:
 
 jobs:
   parallel_demo:
-    runs-on: ubuntu-latest
+    ## follow https://github.com/bromeooo/QA_Automation/settings/actions/runners/new?arch=x64&os=osx
+    runs-on: self-hosted ## for demo purposes this is run on my self-hosted runner
 
     steps:
     - name: Checkout Repository
