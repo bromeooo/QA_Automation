@@ -22,7 +22,7 @@ Before({ tags: "@playwright" }, async function (scenario) {
   this.context = await this.browser.newContext({
     defaultNavigationTimeout: 30000,
     defaultTimeout: 30000,
-    slowmo: 300
+    slowmo: 500
   });
   this.page = await this.context.newPage();
   await this.context.tracing.start({ screenshots: true, snapshots: true });
