@@ -3,8 +3,8 @@
 ## Setup
 
 * The setup and device management for mobile testing is the most complex piece
-* This setup is for MacOS. If you have a windows device, you will only be able to test android devices (no Xcode). 
-* Simulators will be used for this demo, but any real device configuration or 3rd party (browserstack, saucelabs, lambdatest, etc.) can be added for WDIO/Appium
+* This setup is for MacOS. If you have a windows device, you will only be able to test android devices (no Xcode) unless you have access to a cloud provider for an apple device 
+* Simulators will be used for this demo, but any real device configuration or cloud provider (browserstack, saucelabs, lambdatest, etc.) can be added for WDIO/Appium
     * Sample App files are from [WDIO](https://github.com/webdriverio/native-demo-app/releases)
 
 ## General Requirements
