@@ -9,7 +9,8 @@
     "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright",
     "parallel-test": "cucumber-js --config testCucumber/config/config.js -p default --parallel 2",
     "test": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun",
-    "sunrun": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun"
+    "sunrun": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun",
+    "emergent": "cucumber-js --config testCucumber/config/config.js -p default -t @emergent"
 
   },
   "keywords": [],
