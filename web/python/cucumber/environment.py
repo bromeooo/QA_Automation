@@ -34,7 +34,7 @@ async def playwright_browser_chrome(context):
     context.browser_context = await browser.new_context()
     await context.browser_context.tracing.start(screenshots=True, snapshots=True)
     context.page = await context.browser_context.new_page()
-    context.page.set_default_timeout(30000)
+    context.page.set_default_timeout(10000)
     # No need to return context.page, it's already set in context
 
 # Async hook for Playwright
