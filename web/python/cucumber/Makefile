@@ -5,3 +5,5 @@ playwright_test:
 selenium_test:
 	behave --tags=@selenium --format html --out test_artifacts/report/selenium_report.html
 
+parallel_test:
+	behavex --parallel-processes 2

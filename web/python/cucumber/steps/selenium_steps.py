@@ -10,7 +10,6 @@ final_url = None
 @given('the user goes to Challenging DOM with selenium')
 def step_impl(context):
     try:
-        print('home')
         home = Home(context.driver)
         home.go_to_heroku_home()
         home.go_to_dom_challenge()
