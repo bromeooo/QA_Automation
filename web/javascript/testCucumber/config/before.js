@@ -1,26 +1,14 @@
 const { Before, setDefaultTimeout } = require("@cucumber/cucumber");
 const playwright = require("playwright");
 const selenium = require("selenium-webdriver");
-const fs = require("fs");
+const fs = require("fs").promises;
 const path = require("path");
 
 setDefaultTimeout(120000);
 
 Before({ tags: "@playwright" }, async function (scenario) {
   // Clear old traces
-  const traceDir = "./testArtifacts/trace";
-  fs.readdir(traceDir, (err, files) => {
-    if (err) throw err;
-    for (const file of files) {
-      fs.rm(
-        path.join(traceDir, file),
-        { recursive: true, force: true },
-        (err) => {
-          if (err) throw err;
-        }
-      );
-    }
-  });
+  await manageDirectory();
 
   this.browser = await playwright.chromium.launch({
     headless: false,
@@ -45,3 +33,24 @@ Before({ tags: "@selenium" }, async function () {
 
   console.log("Launching Selenium WebDriver");
 });
+
+async function manageDirectory() {
+  const directory = '.testArtifacts/trace';
+
+  try {
+      // Check if the directory exists
+      try {
+          await fs.access(directory);
+          // If this succeeds, the directory exists - clear its contents
+          const files = await fs.readdir(directory);
+          for (const file of files) {
+              await fs.unlink(path.join(directory, file));
+          }
+      } catch {
+          // If an error is thrown, the directory does not exist - create it
+          await fs.mkdir(directory, { recursive: true });
+      }
+  } catch (err) {
+      console.error(`An error occurred: ${err}`);
+  }
+}
