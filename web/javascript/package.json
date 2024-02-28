@@ -8,7 +8,7 @@
     "selenium-test": "cucumber-js --config testCucumber/config/config.js -p default -t @selenium",
     "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright",
     "parallel-test": "cucumber-js --config testCucumber/config/config.js -p default --parallel 2",
-    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @business-wire",
+    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @tapcheck",
     "sunrun": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun",
     "business-wire": "cucumber-js --config testCucumber/config/config.js -p default -t @business-wire"
 
