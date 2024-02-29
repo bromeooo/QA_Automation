@@ -16,6 +16,7 @@ class Sunrun extends BasePage {
 
     async goToApplication() {
         await this.dblClick(this.acceptPopUp) //click the cookies popup
+        await this.page.waitForLoadState('networkidle');
         await this.dblClick(this.applyNow)
         await this.waitForUrlToContain('myworkday') // wait for workday load
     }
