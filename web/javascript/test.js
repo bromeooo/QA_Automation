@@ -58,8 +58,16 @@ numbers.sort((a, b) => b - a);
 const minValue = Math.min(...numbers);
 let stringNumbers = ["1", "2", "3", "4", "5"];
 let intNumbers = stringNumbers.map(num => parseInt(num));
+// loop dict
+for (let [key, value] of Object.entries(obj)) 
+substrings.some(substring => str.includes(substring));
+let str = "Hello, this is a test string.";
+let substrings = ["test", "example", "sample"];
+str.toLowerCase();
 if (typeof variable === 'string') {
   return 'string';}
+  (typeof variable === 'number' && Number.isInteger(variable)) {
+    return 'integer';
   // Challenge #2 - Finding the first non-repeated character
   firstNonRepeatedChar(string) {
     const charCount = {};

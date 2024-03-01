@@ -76,7 +76,7 @@ class BasePage {
    */
   async doType(element, text, timeout = this.defaultTimeout) {
     await element.waitFor({ state: "visible", timeout });
-    await element.type(text);
+    await element.type(text, {delay: 100});
   }
 }
 

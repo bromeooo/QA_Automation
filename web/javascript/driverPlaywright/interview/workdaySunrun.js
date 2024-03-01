@@ -18,7 +18,6 @@ class WorkDay extends BasePage {
       .getByText('No')
       .locator("..")
       .locator('[data-uxi-widget-type="radio"]');
-    this.page.locator(`xpath=//*[contains(text(), 'your_substring')]`);
 
     // name section
     this.firstName = this.page.locator(
