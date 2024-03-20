@@ -8,7 +8,7 @@
     "selenium-test": "cucumber-js --config testCucumber/config/config.js -p default -t @selenium",
     "playwright-test": "cucumber-js --config testCucumber/config/config.js -p default -t @playwright",
     "parallel-test": "cucumber-js --config testCucumber/config/config.js -p default --parallel 2",
-    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @linqto",
+    "test": "cucumber-js --config testCucumber/config/config.js -p default -t @cards",
     "sunrun": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun",
     "business-wire": "cucumber-js --config testCucumber/config/config.js -p default -t @business-wire",
     "tapCheck": "cucumber-js --config testCucumber/config/config.js -p default -t @tapcheck",
@@ -22,6 +22,7 @@
     "chai": "^4.3.4",
     "cucumber-html-reporter": "^7.1.1",
     "ndjson": "^2.0.0",
+    "node-fetch": "^2.7.0",
     "playwright": "^1.41.2",
     "selenium-webdriver": "^4.17.0"
   }
