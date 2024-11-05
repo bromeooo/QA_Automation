@@ -67,31 +67,32 @@ str.toLowerCase();
 if (typeof variable === 'string') {
   return 'string';}
   (typeof variable === 'number' && Number.isInteger(variable)) {
-    return 'integer';
-  // Challenge #2 - Finding the first non-repeated character
-  firstNonRepeatedChar(string) {
-    const charCount = {};
-    for (const char of string) {
-      charCount[char] = charCount[char] ? charCount[char] + 1 : 1;
-    }
-    // for (const char of string) {
-    //   if (charCount[char]) {
-    //     charCount[char] += 1;
-    //   } else {
-    //     charCount[char] = 1;
-    //   }
-    // }
-    for (const char of string) {
-      if (charCount[char] === 1) {
-        return char;
-      }
-    }
-    return null;
+    return 'integer'; }
+
+// Challenge #2 - Finding the first non-repeated character
+firstNonRepeatedChar(string) {
+  const charCount = {};
+  for (const char of string) {
+    charCount[char] = charCount[char] ? charCount[char] + 1 : 1;
   }
-  // Challenge #3 - Reversing letters and words
-  reverseLettersAndWords(string) {
-    return this.s.split("").reverse().join("");
+  // for (const char of string) {
+  //   if (charCount[char]) {
+  //     charCount[char] += 1;
+  //   } else {
+  //     charCount[char] = 1;
+  //   }
+  // }
+  for (const char of string) {
+    if (charCount[char] === 1) {
+      return char;
+    }
   }
+  return null;
+}
+// Challenge #3 - Reversing letters and words
+reverseLettersAndWords(string) {
+  return this.s.split("").reverse().join("");
+}
 //   reverseLettersAndWords(string) {
 //     let reversed = '';
 //     for (let i = string.length - 1; i >= 0; i--) {
@@ -99,26 +100,26 @@ if (typeof variable === 'string') {
 //     }
 //     return reversed;
 // }
-  // Challenge #4 - Generating all permutations
-  generatePermutations(str, prefix = "") {
-    // Get the length of the string
-    var n = str.length;
-    // Base case: if the string is empty, print the current permutation
-    if (n == 0) {
-        console.log(prefix);
-    } else {
-        // Recursive case: iterate over each character in the string
-        for (let i = 0; i < n; i++) {
-            // Call the function recursively, building up the prefix
-            // and removing the current character (at index i) from the string
-            // str.substring(0, i) takes the substring before the character at index i
-            // str.substring(i + 1, n) takes the substring after the character at index i
-            // prefix + str.charAt(i) adds the current character to the prefix
-            this.generatePermutations(
-                str.substring(0, i) + str.substring(i + 1, n),
-                prefix + str.charAt(i) );
-        }
-    }
+// Challenge #4 - Generating all permutations
+generatePermutations(str, prefix = "") {
+  // Get the length of the string
+  var n = str.length;
+  // Base case: if the string is empty, print the current permutation
+  if (n == 0) {
+      console.log(prefix);
+  } else {
+      // Recursive case: iterate over each character in the string
+      for (let i = 0; i < n; i++) {
+          // Call the function recursively, building up the prefix
+          // and removing the current character (at index i) from the string
+          // str.substring(0, i) takes the substring before the character at index i
+          // str.substring(i + 1, n) takes the substring after the character at index i
+          // prefix + str.charAt(i) adds the current character to the prefix
+          this.generatePermutations(
+              str.substring(0, i) + str.substring(i + 1, n),
+              prefix + str.charAt(i) );
+      }
+  }
 }
   // Challenge #5 - Checking whether a string is a palindrome
   isPalindrome() {

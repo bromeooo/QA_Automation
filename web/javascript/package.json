@@ -12,7 +12,8 @@
     "sunrun": "cucumber-js --config testCucumber/config/config.js -p default -t @sunrun",
     "business-wire": "cucumber-js --config testCucumber/config/config.js -p default -t @business-wire",
     "tapCheck": "cucumber-js --config testCucumber/config/config.js -p default -t @tapcheck",
-    "linqto": "cucumber-js --config testCucumber/config/config.js -p default -t @linqto"
+    "linqto": "cucumber-js --config testCucumber/config/config.js -p default -t @linqto",
+    "flex": "cucumber-js --config testCucumber/config/config.js -p default -t @flex"
   },
   "keywords": [],
   "author": "",
